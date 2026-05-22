@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data — EEG datasets are NOT redistributed
+data/DEAP/
+data/DREAMER/
+data/icare/
+data/tuh_eeg/
+data/**/*.edf
+data/**/*.mat
+data/**/*.h5
+data/**/*.hdf5
+
+# Duplicate checkpoint formats
+checkpoints/*.pkl
+results/checkpoints/*.pkl
+
+# Large intermediate files
+results/cache/
+*.npy
+*.npz
+
+# Figures (generated locally by generate_all_figures.py)
+results/plots/
+
+# Internal build/temp files
+gen_figs_output.txt
+*.zip
+paper_output/
+manuscript/
+vividmind_66/

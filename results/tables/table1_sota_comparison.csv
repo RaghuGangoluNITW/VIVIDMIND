@@ -1,0 +1,12 @@
+model,note,binary_auc,macro_auc,macro_f1,accuracy,balanced_accuracy,car_covert_awareness_recall,car_false_alarm_rate,car_mean_ccs_uws,car_mean_ccs_hc,car_n_flagged,car_n_total,pdi_threshold,car_recall,car_far,binary_auc_ci,binary_sensitivity,binary_specificity,n_patients
+Raveendran et al. 2025 (window-level only — leakage),"n=60, window-level 80/20 split, patient leakage",—,0.87 (window),— (window),,,,,,,,,,,,,,,
+Liu et al. 2025 (Multi-Band Attention CNN),"n=28, patient-level, binary AUC reported",0.78,—,—,,,,,,,,,,,,,,,
+"Della Bella et al. 2025 (EEG markers, Commun. Biol.)","n=237, patient-level, binary survival prediction",0.81,—,—,,,,,,,,,,,,,,,
+E2 Euclidean (ablation: flat geometry),,,0.3788,0.2713,0.6856,0.3333,,,,,,,,,,,,,
+E2 Lorentzian only,,,0.7263,0.2866,0.2709,0.5126,,,,,,,,,,,,,
+E3 Graph only,,,0.8824,0.5236,0.5254,0.7066,,,,,,,,,,,,,
+E1 FractalSSL only,,,0.7060,0.3145,0.2942,0.5434,,,,,,,,,,,,,
+AUC-weighted ensemble (mean probs),,,0.8776,0.4152,0.3927,0.6499,,,,,,,,,,,,,
+PDI-CCS Ensemble (no fusion MLP),,,0.8776,0.4152,0.3927,0.6499,0.9882,0.9154,0.2215,0.1524,1395.0000,1635.0000,,,,,,,
+(optimal PDI covert threshold),,,,,,,,,,,,,0.11,0.9882,0.9154,,,,
+"[PRIMARY] Binary outcome (patient-level, LOPO)",,0.8798,,,,,,,,,,,,,,"[0.7748, 0.9678]",0.8974,0.7500,55

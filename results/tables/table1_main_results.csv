@@ -1,0 +1,9 @@
+model,accuracy,balanced_accuracy,macro_f1,macro_auc,car_covert_awareness_recall,car_false_alarm_rate,car_mean_ccs_uws,car_mean_ccs_hc,car_n_flagged,car_n_total,pdi_threshold,car_recall,car_far,binary_auc,binary_auc_ci,binary_sensitivity,binary_specificity,n_patients
+E2 Euclidean (ablation: flat geometry),0.6856,0.3333,0.2713,0.3788,,,,,,,,,,,,,,
+E2 Lorentzian only,0.2709,0.5126,0.2866,0.7263,,,,,,,,,,,,,,
+E3 Graph only,0.5254,0.7066,0.5236,0.8824,,,,,,,,,,,,,,
+E1 FractalSSL only,0.2942,0.5434,0.3145,0.7060,,,,,,,,,,,,,,
+AUC-weighted ensemble (mean probs),0.3927,0.6499,0.4152,0.8776,,,,,,,,,,,,,,
+PDI-CCS Ensemble (no fusion MLP),0.3927,0.6499,0.4152,0.8776,0.9882,0.9154,0.2215,0.1524,1395.0000,1635.0000,,,,,,,,
+(optimal PDI covert threshold),,,,,,,,,,,0.11,0.9882,0.9154,,,,,
+"[PRIMARY] Binary outcome (patient-level, LOPO)",,,,,,,,,,,,,,0.8798,"[0.7748, 0.9678]",0.8974,0.7500,55
