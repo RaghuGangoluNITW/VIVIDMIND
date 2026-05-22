@@ -39,7 +39,7 @@ vividmind_release/
 ├── generate_all_figures.py      # Reproduce all paper figures
 │
 ├── src/
-│   ├── config.py                # All paths & hyperparameters — edit here for your machine
+│   ├── config.py                # All paths & hyperparameters  edit here for your machine
 │   ├── models/
 │   │   ├── fractal_ssl.py       # E1: FractalSSL backbone + SimCLR head
 │   │   ├── lorentzian_encoder.py# E2: Lorentz hyperboloid encoder
@@ -147,7 +147,7 @@ TUH_DIR    = Path("path/to/tuh_eeg")
 
 ## Reproducing Results
 
-### Option A — Evaluate with pre-trained checkpoints (fastest)
+### Option A  Evaluate with pre-trained checkpoints (fastest)
 
 This skips all training and directly reproduces Table 1 (main results), Table 2 (transfer ablation), and the SOTA comparison using the provided checkpoints.
 
@@ -161,18 +161,18 @@ Expected output (matches paper Table 1):
 Sensitivity = 0.8974, Specificity = 0.7500, n_patients = 55
 ```
 
-### Option B — Full training pipeline (reproduces from scratch)
+### Option B  Full training pipeline (reproduces from scratch)
 
 Run stages in order. Each stage saves checkpoints to `results/checkpoints/`.
 
-#### Stage 1 — FractalSSL pre-training (E1 on TUH EEG)
+#### Stage 1  FractalSSL pre-training (E1 on TUH EEG)
 
 ```bash
 python -m src.stage1_pretrain.train_fractalssl --epochs 100 --device cuda
 python -m src.stage1_pretrain.finetune_e1_doc  --epochs 50  --device cuda
 ```
 
-#### Stage 2 — Lorentzian encoder pre-training (E2 on DEAP/DREAMER)
+#### Stage 2  Lorentzian encoder pre-training (E2 on DEAP/DREAMER)
 
 ```bash
 python -m src.stage2_emotion.train_emotion_encoder --dataset deap    --epochs 100 --device cuda
@@ -180,13 +180,13 @@ python -m src.stage2_emotion.train_emotion_encoder --dataset dreamer --epochs 10
 python -m src.stage2_emotion.finetune_e2_doc       --epochs 80       --device cuda
 ```
 
-#### Stage 3 — Graph-GAT encoder training (E3 on I-CARE)
+#### Stage 3  Graph-GAT encoder training (E3 on I-CARE)
 
 ```bash
 python -m src.stage3_doc.train_doc_encoder --epochs 80 --device cuda
 ```
 
-#### Stage 4 — LOPO evaluation
+#### Stage 4  LOPO evaluation
 
 ```bash
 python -m src.stage4_eval.evaluate_pipeline --device cuda
@@ -198,7 +198,7 @@ python -m src.stage4_eval.evaluate_pipeline --device cuda
 python -m src.stage2_emotion.ablation_e2_transfer --epochs 80 --folds 5 --device cuda
 ```
 
-### Option C — Reproduce all paper figures
+### Option C  Reproduce all paper figures
 
 ```bash
 python generate_all_figures.py
@@ -251,20 +251,7 @@ Key values that must match:
 
 ---
 
-## Citation
 
-If you use this code, please cite:
-
-```bibtex
-@article{gangolu2025vividmind,
-  title   = {{VIVIDMIND}: Visible Interpretable Vigilance Inference for
-             Disordered Minds via Intelligent Neural Decoding},
-  author  = {Gangolu, Raghu and Kadambari, K.V.},
-  journal = {Scientific Reports},
-  year    = {2025},
-  note    = {Under review}
-}
-```
 
 ---
 
@@ -277,5 +264,5 @@ Pre-trained checkpoints are released for research purposes only and may only be 
 
 ## Contact
 
-Raghu Gangolu — raghu.gangolu@nitw.ac.in  
+Raghu Gangolu  rb22csr1p02@student.nitw.ac.in
 Department of Computer Science and Engineering, NIT Warangal, India
