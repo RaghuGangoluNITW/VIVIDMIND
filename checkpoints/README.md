@@ -3,14 +3,14 @@
 All checkpoints are PyTorch state-dicts saved with `torch.save(model.state_dict(), path)`.
 Load with `model.load_state_dict(torch.load(path, map_location="cpu"))`.
 
-## E1 — FractalSSL Encoder
+## E1: FractalSSL Encoder
 
 | File | Stage | Description |
 |------|-------|-------------|
 | `e1_fractalssl_tuh.pt` | Stage 1 pre-training | E1 backbone after SimCLR self-supervised pre-training on TUH EEG (2,905 recordings, 100 epochs). No class labels used. |
 | `e1_doc_finetuned.pt` | Stage 1 fine-tune | E1 fine-tuned on I-CARE with a 3-class linear head (CPC 1–2 / CPC 3 / CPC 4). 50 epochs, lr=1e-4. |
 
-## E2 — Lorentzian Encoder
+## E2: Lorentzian Encoder
 
 | File | Stage | Description |
 |------|-------|-------------|
@@ -20,7 +20,7 @@ Load with `model.load_state_dict(torch.load(path, map_location="cpu"))`.
 | `e2_doc_icare.pt` | Stage 2 fine-tune | E2 Lorentzian fine-tuned on I-CARE (3 classes). Random weight initialisation baseline. |
 | `e2_doc_icare_from_deap.pt` | Stage 2 fine-tune | E2 Lorentzian fine-tuned on I-CARE starting from `e2_lorentzian_deap_best.pt`. Used in cross-domain transfer ablation (Table 2 in the paper). |
 
-## E3 — Graph-GAT Encoder
+## E3: Graph-GAT Encoder
 
 | File | Stage | Description |
 |------|-------|-------------|
