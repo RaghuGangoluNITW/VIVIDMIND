@@ -4,7 +4,7 @@
 
 Official implementation for the paper:
 
-> Gangolu R., Kadambari K.V. (2025). *VIVIDMIND: Visible Interpretable Vigilance Inference for Disordered Minds via Intelligent Neural Decoding.* Scientific Reports (under review).
+> Gangolu R., Kadambari K.V. (2026). *VIVIDMIND: Visible Interpretable Vigilance Inference for Disordered Minds via Intelligent Neural Decoding.* Scientific Reports (under review).
 
 ---
 
