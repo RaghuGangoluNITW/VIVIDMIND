@@ -12,9 +12,9 @@ Official implementation for the paper:
 
 VIVIDMIND is a three-stage multi-geometry EEG representation learning framework for binary neurological outcome prediction in cardiac-arrest survivors with disorders of consciousness (DOC). It jointly models:
 
-- **E1 – FractalSSL**: Fractal temporal self-similarity (SimCLR pre-trained on TUH EEG)
-- **E2 – Lorentzian**: Hierarchical DOC-state geometry on the Lorentz hyperboloid (pre-trained on DEAP/DREAMER emotion EEG)
-- **E3 – Graph-GAT**: Functional connectivity breakdown via dwPLI + Graph Attention Networks
+- **E1: FractalSSL**: Fractal temporal self-similarity (SimCLR pre-trained on TUH EEG)
+- **E2: Lorentzian**: Hierarchical DOC-state geometry on the Lorentz hyperboloid (pre-trained on DEAP/DREAMER emotion EEG)
+- **E3: Graph-GAT**: Functional connectivity breakdown via dwPLI + Graph Attention Networks
 
 A **PDI-CCS fusion** module computes cross-encoder disagreement as a continuous covert-awareness biomarker.
 
