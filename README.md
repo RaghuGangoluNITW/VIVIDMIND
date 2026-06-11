@@ -147,7 +147,7 @@ TUH_DIR    = Path("path/to/tuh_eeg")
 
 ## Reproducing Results
 
-### Option A  Evaluate with pre-trained checkpoints (fastest)
+### First Way:  Evaluate with pre-trained checkpoints (fastest)
 
 This skips all training and directly reproduces Table 1 (main results), Table 2 (transfer ablation), and the SOTA comparison using the provided checkpoints.
 
@@ -161,7 +161,7 @@ Expected output (matches paper Table 1):
 Sensitivity = 0.8974, Specificity = 0.7500, n_patients = 55
 ```
 
-### Option B  Full training pipeline (reproduces from scratch)
+### Second Way:  Full training pipeline (reproduces from scratch)
 
 Run stages in order. Each stage saves checkpoints to `results/checkpoints/`.
 
@@ -198,7 +198,7 @@ python -m src.stage4_eval.evaluate_pipeline --device cuda
 python -m src.stage2_emotion.ablation_e2_transfer --epochs 80 --folds 5 --device cuda
 ```
 
-### Option C  Reproduce all paper figures
+### Third Way:  Reproduce all paper figures
 
 ```bash
 python generate_all_figures.py
